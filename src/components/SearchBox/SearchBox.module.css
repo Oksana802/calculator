@@ -1,0 +1,32 @@
+.filter {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 5px;
+}
+
+.span {
+  margin: 0 auto;
+  color: rgb(15, 0, 0);
+  text-shadow: 1px 4px 4px rgb(180, 187, 178);
+  font-weight: 700;
+}
+.input {
+  min-height: 30px;
+  border-radius: 4px;
+  box-shadow: 1px 1px grey;
+  border: 1px solid gray;
+  outline: transparent;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 1158px) {
+  .filter {
+    width: 400px;
+  }
+  .span {
+    font-size: 24px;
+  }
+}

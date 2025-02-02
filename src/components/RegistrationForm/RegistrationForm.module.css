@@ -1,0 +1,149 @@
+.wrapper_r {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 320px;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.box_r {
+  width: 300px;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.animatedImage {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  animation: moveImage 5s forwards;
+  z-index: 1000;
+}
+
+@keyframes moveImage {
+  0% {
+    top: 0;
+    right: 0;
+
+    transform: scale(1);
+  }
+  100% {
+    top: 80%;
+    right: 100%;
+
+    transform: scale(1.8);
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px;
+}
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+
+.span {
+  font-weight: 500;
+  font-size: 16px;
+}
+.input {
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+.error {
+  position: absolute;
+  top: 110%;
+  left: 16px;
+  color: red;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.btn {
+  display: block;
+  margin-left: auto;
+  padding: 2px;
+
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgb(105, 1, 1);
+  background-color: #c70404;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: rgb(22, 110, 5);
+}
+@media screen and (min-width: 768px) {
+  .wrapper_r {
+    max-width: 700px;
+    padding: 10px;
+  }
+
+  .box_r {
+    width: 400px;
+  }
+  .error {
+    font-size: 16px;
+  }
+
+  .animatedImage {
+    width: 120px;
+    height: 120px;
+  }
+  @keyframes moveImage {
+    0% {
+      top: 30%;
+      right: 0;
+      transform: scale(1);
+    }
+    100% {
+      top: 80%;
+      right: 100%;
+      transform: scale(1.8);
+    }
+  }
+}
+@media screen and (min-width: 1158px) {
+  .box_r {
+    max-width: 700px;
+    padding: 30px;
+  }
+  .animatedImage {
+    width: 150px;
+    height: 150px;
+  }
+  @keyframes moveImage {
+    0% {
+      top: 20%;
+      right: 0;
+      transform: scale(1);
+    }
+    100% {
+      top: 80%;
+      right: 100%;
+      transform: scale(1.8);
+    }
+  }
+}
