@@ -63,7 +63,7 @@ const HomePage = () => {
 
   return (
     <div className={s.box}>
-      <h2>Калькулятор розкрою листа</h2>
+      <h2>Калькулятор розкрою листа під відлив</h2>
 
       <label>Виберіть розмір листа:</label>
       <select value={sheetSize} onChange={(e) => setSheetSize(e.target.value)}>
