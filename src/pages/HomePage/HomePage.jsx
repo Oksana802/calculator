@@ -133,9 +133,7 @@ const HomePage = () => {
           <span className={s.wasteArea}>{detailCost}</span>
         </li>
         <li>
-          <strong>
-            Вартість деталі з урахуванням металу у відходах (грн):
-          </strong>{" "}
+          <strong>Вартість деталі + вартість металу відходів (грн):</strong>{" "}
           <span className={s.wasteArea}>{detailCostWithWaste}</span>
         </li>
       </ul>
