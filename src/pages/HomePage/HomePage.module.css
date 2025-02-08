@@ -113,28 +113,37 @@
 .read-the-docs {
   color: #888;
 } */
-
-.box {
-  width: 80vw;
+.wrapper {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  display: flex;
+  padding: 20px;
+}
+.box {
+  width: 50%;
+  max-width: 600px;
+  display: flex;
+  gap: 10px;
+  padding: 60px 20px;
+  margin: 0 auto;
 
   flex-direction: column;
   justify-content: center;
   background-color: rgb(221, 237, 245);
   border-radius: 8px;
-
-  gap: 10px;
-  padding: 60px;
 }
 input {
-  width: 200px;
+  max-width: 200px;
   height: 30px;
   margin: 5px;
   padding: 5px;
 }
 
 select {
-  width: 200px;
+  max-width: 200px;
   height: 30px;
   margin: 5px;
   padding: 5px;
@@ -142,7 +151,7 @@ select {
 
 button {
   display: inline-block;
-  width: 200px;
+  max-width: 200px;
   margin: 5px;
   padding: 16px;
   font-weight: 500;
@@ -183,3 +192,15 @@ button:hover {
   font-weight: 600;
   color: green;
 } */
+
+@media screen and (min-width: 1158px) {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    width: 100vw;
+    display: flex;
+    padding: 20px;
+  }
+}
