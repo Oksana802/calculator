@@ -45,14 +45,21 @@ const HomePage = () => {
       return;
     }
 
+    //  Площа деталі
     let detailArea = width * length;
+    // Кількість деталей з 1 листа
     let count = Math.floor(sheetArea / detailArea);
+    // Загальна площа всіх деталей
     let usedArea = count * detailArea;
+    // Площа відходів
     let waste = sheetArea - usedArea;
-
+    // Вартість зроблених виробу((метал + робота)* площу використаного матеріалу на один виріб)
     let baseCost = detailArea * (matCost + workC);
+    // Вартість виробу + %
     let finalCost = baseCost + baseCost * extraP;
+    //  Вартість відходів
     let wasteCost = waste * matCost;
+    // Вартість виробу та % + вартість відходів, що ділене на кількість виробів з листа.
     let finalCostWithWaste = finalCost + wasteCost / count;
 
     setDetailCount(count);
@@ -75,7 +82,7 @@ const HomePage = () => {
           <option value="1x2">1 × 2 м</option>
         </select>
 
-        <label>Ширина деталі (м):</label>
+        <label>Ширина виробу (м):</label>
         <input
           type="number"
           value={detailWidth}
@@ -84,7 +91,7 @@ const HomePage = () => {
           min="0.01"
         />
 
-        <label>Довжина деталі (м):</label>
+        <label>Довжина виробу (м):</label>
         <input
           type="number"
           value={detailLength}
@@ -125,7 +132,7 @@ const HomePage = () => {
         <h3>Результати:</h3>
         <ul>
           <li>
-            <strong>Кількість деталей:</strong>{" "}
+            <strong>Кількість виробів:</strong>{" "}
             <span className={s.wasteArea}>{detailCount}</span>
           </li>
           <li>
@@ -133,11 +140,11 @@ const HomePage = () => {
             <span className={s.wasteArea}>{wasteArea}</span>
           </li>
           <li>
-            <strong>Вартість однієї деталі (грн):</strong>{" "}
+            <strong>Вартість одного виробу (грн):</strong>{" "}
             <span className={s.wasteArea}>{detailCost}</span>
           </li>
           <li>
-            <strong>Вартість деталі + вартість металу відходів (грн):</strong>{" "}
+            <strong>Вартість виробу + вартість металу відходів (грн):</strong>{" "}
             <span className={s.wasteArea}>{detailCostWithWaste}</span>
           </li>
         </ul>

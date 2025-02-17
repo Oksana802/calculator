@@ -21,7 +21,7 @@ const App = () => {
   return isRefreshing ? null : (
     // <Layout>
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      {/* <Route path="/" element={<HomePage />} /> */}
       {/* <Route
           path="/contacts"
           element={
